@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct appApp: App {
+    @State var isLogged = false
+    var userUsecases: UserUsecases
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(userUsecases: userUsecases)
         }
+    }
+    
+    init() {
+        let api = Api()
+        let userRepository = UserRepository(api: api)
+        self.userUsecases = UserUsecases(userRepository: userRepository)
     }
 }
