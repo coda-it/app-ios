@@ -20,7 +20,7 @@ struct ContentView: View {
                 AppView()
                     .tabItem {
                         Image(systemName: "list.dash")
-                        Text("Dashboard")
+                        Text("Posts")
                     }
                 
                 ProfileView(isLogged: $isLogged)
