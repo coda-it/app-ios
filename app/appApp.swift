@@ -11,10 +11,11 @@ import SwiftUI
 struct appApp: App {
     @State var isLogged = false
     var userUsecases: UserUsecases
+    var postUsecases: PostUsecases
     
     var body: some Scene {
         WindowGroup {
-            ContentView(userUsecases: userUsecases)
+            ContentView(posts: [], userUsecases: userUsecases, postUsecases: postUsecases)
         }
     }
     
@@ -22,5 +23,8 @@ struct appApp: App {
         let api = Api()
         let userRepository = UserRepository(api: api)
         self.userUsecases = UserUsecases(userRepository: userRepository)
+        
+        let postRepository = PostRepository(api: api)
+        self.postUsecases = PostUsecases(postRepository: postRepository)
     }
 }

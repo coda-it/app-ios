@@ -10,14 +10,16 @@ import SwiftUI
 struct ContentView: View {
     @State var isLogged = false
     @State var isLoading = false
-
+    @State var posts: Array<PostModel>
+    
     var userUsecases: UserUsecases
+    var postUsecases: PostUsecases
     var settings = UserSettings()
     
     var body: some View {
         if isLogged {
             TabView {
-                AppView()
+                AppView(postUsecases: self.postUsecases, posts: $posts)
                     .tabItem {
                         Image(systemName: "list.dash")
                         Text("Posts")
@@ -39,6 +41,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(isLogged: false, isLoading: false, userUsecases: UserUsecases(userRepository: UserRepository(api: Api())))
+        ContentView(isLogged: false, isLoading: false, posts: [], userUsecases: UserUsecases(userRepository: UserRepository(api: Api())),
+                    postUsecases: PostUsecases(postRepository: PostRepository(api: Api())))
     }
 }
