@@ -8,13 +8,13 @@
 import Foundation
 
 struct Api {
-    func get<T: Codable>(url: String, type: T.Type, completion: @escaping (T) -> ()) {
+    func get<T: Codable>(url: String, type: T.Type, completion: @escaping (T?) -> ()) {
         let urlTarget = URL(string: url)!
         let request = URLRequest(url: urlTarget)
         
         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
             guard let data = data else {
-                completion([] as! T)
+                completion(nil)
                 return
             }
             
@@ -23,14 +23,14 @@ struct Api {
                 completion(response)
                 return
             } catch {
-                completion([] as! T)
+                completion(nil)
             }
         }
         
         task.resume()
     }
     
-    func post(url: String, body: String, completion: @escaping (Bool) -> ()) {
+    func post<T: Codable>(url: String, body: String, completion: @escaping (T?) -> ()) {
         let urlTarget = URL(string: url)!
         
         var request = URLRequest(url: urlTarget)
@@ -39,16 +39,16 @@ struct Api {
         
         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
             guard let data = data else {
-                completion(false)
+                completion(nil)
                 return
             }
             
             do {
-                let userSession = try JSONDecoder().decode(UserSession.self, from: data)
-                completion(userSession.isSession)
+                let response = try JSONDecoder().decode(T.self, from: data)
+                completion(response)
                 return
             } catch {
-                completion(false)
+                completion(nil)
             }
         }
         

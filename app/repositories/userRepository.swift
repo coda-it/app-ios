@@ -14,6 +14,8 @@ struct UserRepository {
     func login(username: String, apiAddress: String, password: String, completion: @escaping (Bool) -> ()) {
         self.api.post(url: "\(apiAddress)/api/login",
                       body: "username=\(username)&password=\(password)",
-                      completion: completion)
+                      completion: { (data: UserSession?) in
+                        completion(data?.isSession ?? false)
+                      })
     }
 }

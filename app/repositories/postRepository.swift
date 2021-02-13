@@ -16,9 +16,8 @@ struct PostRepository {
     
     func fetchPosts(apiAddress: String, completion: @escaping (Array<PostModel>) -> ()) {
         self.api.get(url: "\(apiAddress)/api/post", type: PostsResponse.self,
-                     completion: { (data: PostsResponse) in
-                        print("xxx:b", data)
-                        completion(data._embedded.posts)
+                     completion: { (data: PostsResponse?) in
+                        completion(data?._embedded.posts ?? [])
                      })
     }
 }
