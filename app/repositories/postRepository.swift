@@ -4,12 +4,6 @@
 //
 //  Created by Oskar on 12/02/2021.
 //
-struct Embedded: Codable {
-    var posts: Array<PostModel>
-}
-struct PostsResponse: Codable {
-    var _embedded: Embedded
-}
 
 struct PostRepository {
     let api: Api

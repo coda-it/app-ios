@@ -14,3 +14,11 @@ struct PostModel: Codable {
     var description: String
     var image: String
 }
+
+struct PostsEmbedded: Codable {
+    var posts: Array<PostModel>
+}
+
+struct PostsResponse: Codable {
+    var _embedded: PostsEmbedded
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3348945D25D82C14009840F1 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348945C25D82C14009840F1 /* userModel.swift */; };
 		335311D425D16B8D007196AB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335311D325D16B8D007196AB /* LoginView.swift */; };
 		335311D925D16BE4007196AB /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335311D825D16BE4007196AB /* colors.swift */; };
 		335311E225D16C17007196AB /* sizings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335311E125D16C17007196AB /* sizings.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3348945C25D82C14009840F1 /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
 		335311D325D16B8D007196AB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		335311D825D16BE4007196AB /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		335311E125D16C17007196AB /* sizings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sizings.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				3372912F25D65DC30060F6CD /* postModel.swift */,
+				3348945C25D82C14009840F1 /* userModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				335311E225D16C17007196AB /* sizings.swift in Sources */,
 				335311F225D16CF0007196AB /* userSettings.swift in Sources */,
 				335311E725D16C84007196AB /* ProfileView.swift in Sources */,
+				3348945D25D82C14009840F1 /* userModel.swift in Sources */,
 				3372913D25D65EEA0060F6CD /* postUsecases.swift in Sources */,
 				3353120425D16D58007196AB /* userRepository.swift in Sources */,
 				3372913825D65E510060F6CD /* postRepository.swift in Sources */,
