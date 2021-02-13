@@ -4,6 +4,9 @@
 //
 //  Created by Oskar on 08/02/2021.
 //
+struct UserSession: Codable {
+    var isSession: Bool
+}
 
 struct UserRepository {
     let api: Api

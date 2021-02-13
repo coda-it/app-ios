@@ -25,7 +25,7 @@ struct AppView: View {
     }
     
     func fetchPosts (apiAddress: String) {
-        self.postUsecases.getAllPosts(apiAddress: apiAddress, completion: { agents in
+        self.postUsecases.getAllPosts(apiAddress: apiAddress, completion: { posts in
             self.posts = posts
         })
     }

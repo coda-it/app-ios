@@ -7,33 +7,23 @@
 
 import Foundation
 
-struct UserSession: Codable {
-    var isSession: Bool
-}
-struct Embedded: Codable {
-    var posts: Array<PostModel>
-}
-struct PostsResponse: Codable {
-    var _embedded: Embedded
-}
-
 struct Api {
-    func get(url: String, completion: @escaping (Array<PostModel>) -> ()) {
+    func get<T: Codable>(url: String, type: T.Type, completion: @escaping (T) -> ()) {
         let urlTarget = URL(string: url)!
         let request = URLRequest(url: urlTarget)
         
         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
             guard let data = data else {
-                completion([])
+                completion([] as! T)
                 return
             }
             
             do {
-                let agentResponse = try JSONDecoder().decode(PostsResponse.self, from: data)
-                completion(agentResponse._embedded.posts)
+                let response = try JSONDecoder().decode(T.self, from: data)
+                completion(response)
                 return
             } catch {
-                completion([])
+                completion([] as! T)
             }
         }
         
