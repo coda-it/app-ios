@@ -15,8 +15,12 @@ struct AppView: View {
     var body: some View {
         TabView {
             VStack(alignment: .leading) {
-                List(posts, id:\.self.id) { post in
-                    Text(post.title)
+                NavigationView {
+                    List(posts, id:\.self.id) { post in
+                        NavigationLink(destination: PostDetail(post: post)) {
+                            Text(post.title)
+                        }
+                    }
                 }
             }
         }.onAppear {
