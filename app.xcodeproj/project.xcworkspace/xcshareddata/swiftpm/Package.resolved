@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "swift-utils",
+        "repositoryURL": "https://github.com/coda-it/swift-utils",
+        "state": {
+          "branch": null,
+          "revision": "ee31573cca45459df57de9de1471b79e31d80c15",
+          "version": "0.0.7"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

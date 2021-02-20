@@ -6,6 +6,11 @@
 //
 
 import SwiftUI
+import swift_utils
+
+struct X {
+    var a: String
+}
 
 struct ContentView: View {
     @State var isLogged = false
@@ -32,7 +37,7 @@ struct ContentView: View {
                     }
             }.environmentObject(settings)
         } else {
-            LoadingView(isShowing: $isLoading) {
+            swift_utils.LoadingView(isShowing: $isLoading) {
                 LoginView(isLogged: $isLogged, isLoading: $isLoading, userUsecases: self.userUsecases).environmentObject(settings)
             }
         }
