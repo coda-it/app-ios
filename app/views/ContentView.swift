@@ -8,10 +8,6 @@
 import SwiftUI
 import swift_utils
 
-struct X {
-    var a: String
-}
-
 struct ContentView: View {
     @State var isLogged = false
     @State var isLoading = false
