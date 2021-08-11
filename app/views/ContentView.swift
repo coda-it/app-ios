@@ -15,12 +15,12 @@ struct ContentView: View {
     
     var userUsecases: UserUsecases
     var postUsecases: PostUsecases
-    var settings = UserSettings()
+    var platformUsecases: PlatformUsecases
     
     var body: some View {
         if isLogged {
             TabView {
-                AppView(postUsecases: self.postUsecases, posts: $posts)
+                AppView(postUsecases: self.postUsecases, platformUsecases: self.platformUsecases, posts: $posts)
                     .tabItem {
                         Image(systemName: "list.dash")
                         Text("Posts")
@@ -31,10 +31,10 @@ struct ContentView: View {
                         Image(systemName: "person")
                         Text("Profile")
                     }
-            }.environmentObject(settings)
+            }
         } else {
             swift_utils.LoadingView(isShowing: $isLoading) {
-                LoginView(isLogged: $isLogged, isLoading: $isLoading, userUsecases: self.userUsecases).environmentObject(settings)
+                LoginView(isLogged: $isLogged, isLoading: $isLoading, userUsecases: self.userUsecases, platformUsecases: self.platformUsecases)
             }
         }
     }
@@ -43,6 +43,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(isLogged: false, isLoading: false, posts: [], userUsecases: UserUsecases(userRepository: UserRepository(api: Api())),
-                    postUsecases: PostUsecases(postRepository: PostRepository(api: Api())))
+                    postUsecases: PostUsecases(postRepository: PostRepository(api: Api())),
+                    platformUsecases: PlatformUsecases(config: Config()))
     }
 }

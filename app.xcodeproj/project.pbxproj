@@ -15,13 +15,14 @@
 		335311E225D16C17007196AB /* sizings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335311E125D16C17007196AB /* sizings.swift */; };
 		335311E725D16C84007196AB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335311E625D16C84007196AB /* ProfileView.swift */; };
 		335311EC25D16CA5007196AB /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335311EB25D16CA5007196AB /* AppView.swift */; };
-		335311F225D16CF0007196AB /* userSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335311F125D16CF0007196AB /* userSettings.swift */; };
 		335311FB25D16D1A007196AB /* userUsecases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335311FA25D16D1A007196AB /* userUsecases.swift */; };
 		3353120425D16D58007196AB /* userRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353120325D16D58007196AB /* userRepository.swift */; };
 		3353120A25D16D96007196AB /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353120925D16D96007196AB /* api.swift */; };
 		3372913025D65DC30060F6CD /* postModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3372912F25D65DC30060F6CD /* postModel.swift */; };
 		3372913825D65E510060F6CD /* postRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3372913725D65E510060F6CD /* postRepository.swift */; };
 		3372913D25D65EEA0060F6CD /* postUsecases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3372913C25D65EEA0060F6CD /* postUsecases.swift */; };
+		3374848126C172E900EBB25A /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374848026C172E900EBB25A /* config.swift */; };
+		3374848626C3FD8000EBB25A /* platformUsecases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374848526C3FD8000EBB25A /* platformUsecases.swift */; };
 		33E49D3C25D06D0F000B39D2 /* appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E49D3B25D06D0F000B39D2 /* appApp.swift */; };
 		33E49D3E25D06D0F000B39D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E49D3D25D06D0F000B39D2 /* ContentView.swift */; };
 		33E49D4025D06D13000B39D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33E49D3F25D06D13000B39D2 /* Assets.xcassets */; };
@@ -55,13 +56,14 @@
 		335311E125D16C17007196AB /* sizings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sizings.swift; sourceTree = "<group>"; };
 		335311E625D16C84007196AB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		335311EB25D16CA5007196AB /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
-		335311F125D16CF0007196AB /* userSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userSettings.swift; sourceTree = "<group>"; };
 		335311FA25D16D1A007196AB /* userUsecases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userUsecases.swift; sourceTree = "<group>"; };
 		3353120325D16D58007196AB /* userRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userRepository.swift; sourceTree = "<group>"; };
 		3353120925D16D96007196AB /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		3372912F25D65DC30060F6CD /* postModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postModel.swift; sourceTree = "<group>"; };
 		3372913725D65E510060F6CD /* postRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postRepository.swift; sourceTree = "<group>"; };
 		3372913C25D65EEA0060F6CD /* postUsecases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postUsecases.swift; sourceTree = "<group>"; };
+		3374848026C172E900EBB25A /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		3374848526C3FD8000EBB25A /* platformUsecases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = platformUsecases.swift; sourceTree = "<group>"; };
 		33E49D3825D06D0F000B39D2 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E49D3B25D06D0F000B39D2 /* appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appApp.swift; sourceTree = "<group>"; };
 		33E49D3D25D06D0F000B39D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,19 +125,12 @@
 			path = constants;
 			sourceTree = "<group>";
 		};
-		335311F025D16CE1007196AB /* userSettings */ = {
-			isa = PBXGroup;
-			children = (
-				335311F125D16CF0007196AB /* userSettings.swift */,
-			);
-			path = userSettings;
-			sourceTree = "<group>";
-		};
 		335311F925D16D08007196AB /* usecases */ = {
 			isa = PBXGroup;
 			children = (
 				335311FA25D16D1A007196AB /* userUsecases.swift */,
 				3372913C25D65EEA0060F6CD /* postUsecases.swift */,
+				3374848526C3FD8000EBB25A /* platformUsecases.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -166,6 +161,33 @@
 			path = models;
 			sourceTree = "<group>";
 		};
+		3374847D26C171EA00EBB25A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				3374847F26C172C800EBB25A /* config */,
+				3353120225D16D39007196AB /* repositories */,
+				3353120825D16D82007196AB /* services */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		3374847E26C1721F00EBB25A /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				3372912E25D65D9E0060F6CD /* models */,
+				335311F925D16D08007196AB /* usecases */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		3374847F26C172C800EBB25A /* config */ = {
+			isa = PBXGroup;
+			children = (
+				3374848026C172E900EBB25A /* config.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
 		33E49D2F25D06D0F000B39D2 = {
 			isa = PBXGroup;
 			children = (
@@ -189,11 +211,8 @@
 		33E49D3A25D06D0F000B39D2 /* app */ = {
 			isa = PBXGroup;
 			children = (
-				3372912E25D65D9E0060F6CD /* models */,
-				3353120825D16D82007196AB /* services */,
-				3353120225D16D39007196AB /* repositories */,
-				335311F925D16D08007196AB /* usecases */,
-				335311F025D16CE1007196AB /* userSettings */,
+				3374847E26C1721F00EBB25A /* domain */,
+				3374847D26C171EA00EBB25A /* data */,
 				335311DD25D16BFF007196AB /* constants */,
 				335311CF25D16B66007196AB /* views */,
 				33E49D3B25D06D0F000B39D2 /* appApp.swift */,
@@ -369,11 +388,12 @@
 				33E49D3E25D06D0F000B39D2 /* ContentView.swift in Sources */,
 				335311FB25D16D1A007196AB /* userUsecases.swift in Sources */,
 				3372913025D65DC30060F6CD /* postModel.swift in Sources */,
+				3374848126C172E900EBB25A /* config.swift in Sources */,
 				33E49D3C25D06D0F000B39D2 /* appApp.swift in Sources */,
 				335311EC25D16CA5007196AB /* AppView.swift in Sources */,
 				335311E225D16C17007196AB /* sizings.swift in Sources */,
-				335311F225D16CF0007196AB /* userSettings.swift in Sources */,
 				3309E8FD25DA5AA60071DA3C /* PostView.swift in Sources */,
+				3374848626C3FD8000EBB25A /* platformUsecases.swift in Sources */,
 				335311E725D16C84007196AB /* ProfileView.swift in Sources */,
 				3348945D25D82C14009840F1 /* userModel.swift in Sources */,
 				3372913D25D65EEA0060F6CD /* postUsecases.swift in Sources */,
@@ -420,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_ADDRESS = 127.0.0.1;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -481,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_ADDRESS = 127.0.0.1;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

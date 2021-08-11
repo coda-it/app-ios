@@ -9,8 +9,8 @@ import SwiftUI
 
 struct AppView: View {
     var postUsecases: PostUsecases
+    var platformUsecases: PlatformUsecases
     @Binding var posts: Array<PostModel>
-    @EnvironmentObject var settings: UserSettings
     
     var body: some View {
         TabView {
@@ -24,7 +24,7 @@ struct AppView: View {
                 }
             }
         }.onAppear {
-            self.fetchPosts(apiAddress: settings.apiAddress)
+            self.fetchPosts(apiAddress: platformUsecases.getAPIAddress())
         }
     }
     
@@ -39,6 +39,6 @@ struct AppView_Previews: PreviewProvider {
     @State(initialValue: []) static var posts: Array<PostModel>
     
     static var previews: some View {
-        AppView(postUsecases: PostUsecases(postRepository: PostRepository(api: Api())), posts: $posts)
+        AppView(postUsecases: PostUsecases(postRepository: PostRepository(api: Api())), platformUsecases: PlatformUsecases(config: Config()), posts: $posts)
     }
 }
