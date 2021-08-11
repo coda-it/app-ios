@@ -13,8 +13,8 @@ struct LoginView: View {
     @Binding var isLoading: Bool
     @State private var name = ""
     @State private var password = ""
-    @EnvironmentObject var settings: UserSettings
     var userUsecases: UserUsecases
+    var platformUsecases: PlatformUsecases
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -30,12 +30,7 @@ struct LoginView: View {
                 .padding()
                 .background(Color.white)
                 .cornerRadius(CSizings.rounding)
-            
-            TextField("API", text: $settings.apiAddress)
-                .padding()
-                .background(Color.white)
-                .cornerRadius(CSizings.rounding)
-            
+
             SecureField("Password", text: $password)
                 .padding()
                 .background(Color.white)
@@ -45,7 +40,7 @@ struct LoginView: View {
                 self.isLoading = true
                 self.userUsecases.login(
                     username: self.name,
-                    apiAddress: settings.apiAddress,
+                    apiAddress: self.platformUsecases.getAPIAddress(),
                     password: self.password,
                     completion: {
                         isLogged in
@@ -71,6 +66,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(isLogged: .constant(false), isLoading: .constant(false), userUsecases: UserUsecases(userRepository: UserRepository(api: Api())))
+        LoginView(isLogged: .constant(false), isLoading: .constant(false), userUsecases: UserUsecases(userRepository: UserRepository(api: Api())), platformUsecases: PlatformUsecases(config: Config()))
     }
 }
