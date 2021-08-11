@@ -30,7 +30,7 @@ struct LoginView: View {
                 .padding()
                 .background(Color.white)
                 .cornerRadius(CSizings.rounding)
-
+            
             SecureField("Password", text: $password)
                 .padding()
                 .background(Color.white)

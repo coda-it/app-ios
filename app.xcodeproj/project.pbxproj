@@ -21,7 +21,7 @@
 		3372913025D65DC30060F6CD /* postModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3372912F25D65DC30060F6CD /* postModel.swift */; };
 		3372913825D65E510060F6CD /* postRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3372913725D65E510060F6CD /* postRepository.swift */; };
 		3372913D25D65EEA0060F6CD /* postUsecases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3372913C25D65EEA0060F6CD /* postUsecases.swift */; };
-		3374848126C172E900EBB25A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374848026C172E900EBB25A /* Config.swift */; };
+		3374848126C172E900EBB25A /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374848026C172E900EBB25A /* config.swift */; };
 		3374848626C3FD8000EBB25A /* platformUsecases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374848526C3FD8000EBB25A /* platformUsecases.swift */; };
 		33E49D3C25D06D0F000B39D2 /* appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E49D3B25D06D0F000B39D2 /* appApp.swift */; };
 		33E49D3E25D06D0F000B39D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E49D3D25D06D0F000B39D2 /* ContentView.swift */; };
@@ -62,7 +62,7 @@
 		3372912F25D65DC30060F6CD /* postModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postModel.swift; sourceTree = "<group>"; };
 		3372913725D65E510060F6CD /* postRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postRepository.swift; sourceTree = "<group>"; };
 		3372913C25D65EEA0060F6CD /* postUsecases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postUsecases.swift; sourceTree = "<group>"; };
-		3374848026C172E900EBB25A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		3374848026C172E900EBB25A /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		3374848526C3FD8000EBB25A /* platformUsecases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = platformUsecases.swift; sourceTree = "<group>"; };
 		33E49D3825D06D0F000B39D2 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E49D3B25D06D0F000B39D2 /* appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appApp.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		3374847F26C172C800EBB25A /* config */ = {
 			isa = PBXGroup;
 			children = (
-				3374848026C172E900EBB25A /* Config.swift */,
+				3374848026C172E900EBB25A /* config.swift */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 				33E49D3E25D06D0F000B39D2 /* ContentView.swift in Sources */,
 				335311FB25D16D1A007196AB /* userUsecases.swift in Sources */,
 				3372913025D65DC30060F6CD /* postModel.swift in Sources */,
-				3374848126C172E900EBB25A /* Config.swift in Sources */,
+				3374848126C172E900EBB25A /* config.swift in Sources */,
 				33E49D3C25D06D0F000B39D2 /* appApp.swift in Sources */,
 				335311EC25D16CA5007196AB /* AppView.swift in Sources */,
 				335311E225D16C17007196AB /* sizings.swift in Sources */,
