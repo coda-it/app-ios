@@ -5,7 +5,6 @@
 //  Created by Oskar on 12/02/2021.
 //
 
-
 struct PostModel: Codable {
     var id: String
     var userId: String

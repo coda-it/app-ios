@@ -8,24 +8,33 @@
 import SwiftUI
 
 struct AppView: View {
+    var categoryUsecases: CategoryUsecases
     var postUsecases: PostUsecases
     var platformUsecases: PlatformUsecases
+    @Binding var categories: Array<CategoryModel>
     @Binding var posts: Array<PostModel>
     
     var body: some View {
         TabView {
             VStack(alignment: .leading) {
                 NavigationView {
-                    List(posts, id:\.self.id) { post in
-                        NavigationLink(destination: PostDetail(post: post)) {
-                            Text(post.title)
+                    List(categories, id:\.self.id) { category in
+                        NavigationLink(destination: CategoryDetail(category: category, posts: posts)) {
+                            Image(category.image).cornerRadius(4.0)
                         }
                     }
                 }
             }
         }.onAppear {
+            self.fetchCategories(apiAddress: platformUsecases.getAPIAddress())
             self.fetchPosts(apiAddress: platformUsecases.getAPIAddress())
         }
+    }
+    
+    func fetchCategories (apiAddress: String) {
+        self.categoryUsecases.getAllCategories(apiAddress: apiAddress, completion: { categories in
+            self.categories = categories
+        })
     }
     
     func fetchPosts (apiAddress: String) {
@@ -37,8 +46,15 @@ struct AppView: View {
 
 struct AppView_Previews: PreviewProvider {
     @State(initialValue: []) static var posts: Array<PostModel>
+    @State(initialValue: []) static var categories: Array<CategoryModel>
     
     static var previews: some View {
-        AppView(postUsecases: PostUsecases(postRepository: PostRepository(api: Api())), platformUsecases: PlatformUsecases(config: Config()), posts: $posts)
+        AppView(
+            categoryUsecases: CategoryUsecases(categoryRepository: CategoryRepository(api: Api())),
+            postUsecases: PostUsecases(postRepository: PostRepository(api: Api())),
+            platformUsecases: PlatformUsecases(config: Config()),
+            categories: $categories,
+            posts: $posts
+        )
     }
 }
