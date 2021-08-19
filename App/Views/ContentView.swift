@@ -12,15 +12,17 @@ struct ContentView: View {
     @State var isLogged = false
     @State var isLoading = false
     @State var posts: Array<PostModel>
+    @State var categories: Array<CategoryModel>
     
     var userUsecases: UserUsecases
+    var categoryUsecases: CategoryUsecases
     var postUsecases: PostUsecases
     var platformUsecases: PlatformUsecases
     
     var body: some View {
         if isLogged {
             TabView {
-                AppView(postUsecases: self.postUsecases, platformUsecases: self.platformUsecases, posts: $posts)
+                AppView(categoryUsecases: self.categoryUsecases, postUsecases: self.postUsecases, platformUsecases: self.platformUsecases, categories: $categories, posts: $posts)
                     .tabItem {
                         Image(systemName: "list.dash")
                         Text("Posts")
@@ -42,7 +44,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(isLogged: false, isLoading: false, posts: [], userUsecases: UserUsecases(userRepository: UserRepository(api: Api())),
+        ContentView(isLogged: false, isLoading: false, posts: [], categories: [], userUsecases: UserUsecases(userRepository: UserRepository(api: Api())),
+                    categoryUsecases: CategoryUsecases(categoryRepository: CategoryRepository(api: Api())),
                     postUsecases: PostUsecases(postRepository: PostRepository(api: Api())),
                     platformUsecases: PlatformUsecases(config: Config()))
     }
