@@ -20,7 +20,14 @@ struct AppView: View {
                 NavigationView {
                     List(categories, id:\.self.id) { category in
                         NavigationLink(destination: CategoryDetail(category: category, posts: posts)) {
-                            Image(category.image).cornerRadius(4.0)
+                            VStack(alignment: .leading) {
+                                Text(category.name)
+                                Image(base64String: category.image)?
+                                    .resizable()
+                                    .cornerRadius(4.0)
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 250)
+                            }
                         }
                     }
                 }

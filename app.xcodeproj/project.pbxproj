@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3309E8FD25DA5AA60071DA3C /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E8FC25DA5AA60071DA3C /* PostView.swift */; };
 		333C0C8325E047B200FBB9E2 /* swift-utils in Frameworks */ = {isa = PBXBuildFile; productRef = 333C0C8225E047B200FBB9E2 /* swift-utils */; };
+		333DC02D26D514A0008C2661 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DC02C26D514A0008C2661 /* ImageExtension.swift */; };
 		3348945D25D82C14009840F1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348945C25D82C14009840F1 /* UserModel.swift */; };
 		335311D425D16B8D007196AB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335311D325D16B8D007196AB /* LoginView.swift */; };
 		335311D925D16BE4007196AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335311D825D16BE4007196AB /* Colors.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		3309E8FC25DA5AA60071DA3C /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		333DC02C26D514A0008C2661 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		3348945C25D82C14009840F1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		335311D325D16B8D007196AB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		335311D825D16BE4007196AB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		333DC02B26D51489008C2661 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				333DC02C26D514A0008C2661 /* ImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		335311CF25D16B66007196AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		33E49D3A25D06D0F000B39D2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				333DC02B26D51489008C2661 /* Extensions */,
 				3374847E26C1721F00EBB25A /* Domain */,
 				3374847D26C171EA00EBB25A /* Data */,
 				335311DD25D16BFF007196AB /* Constants */,
@@ -405,6 +416,7 @@
 				335311EC25D16CA5007196AB /* AppView.swift in Sources */,
 				33D2A1E926CE674C008319B4 /* CategoryModel.swift in Sources */,
 				33D2A1F826CE724C008319B4 /* CategoryView.swift in Sources */,
+				333DC02D26D514A0008C2661 /* ImageExtension.swift in Sources */,
 				335311E225D16C17007196AB /* Sizings.swift in Sources */,
 				3309E8FD25DA5AA60071DA3C /* PostView.swift in Sources */,
 				3374848626C3FD8000EBB25A /* PlatformUsecases.swift in Sources */,
@@ -456,7 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				API_ADDRESS = "http://127.0.0.1:3000";
+				API_ADDRESS = "http://23.97.160.165:3000";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -518,7 +530,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				API_ADDRESS = "http://127.0.0.1:3000";
+				API_ADDRESS = "http://23.97.160.165:3000";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
